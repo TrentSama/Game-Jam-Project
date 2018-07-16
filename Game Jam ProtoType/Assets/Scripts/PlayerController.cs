@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody2D rb;
     public float speed;
     public float thrust;
-    public int playerCamera;
+    [HideInInspector]
     public bool canMove = true;
+    public float transitionSpeed;
 
     // Use this for initialization
     void Start () {
-        playerCamera = 10;
         rb = GetComponent<Rigidbody2D>();
 	}
 	
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
     IEnumerator TransitionPause()
     {
         canMove = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(transitionSpeed);
         canMove = true;
     }
 
