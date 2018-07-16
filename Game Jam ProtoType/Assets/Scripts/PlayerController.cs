@@ -19,11 +19,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-        if (canMove == true)
-        {
-            Moving();
-        }
+        Moving();
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -34,12 +30,15 @@ public class PlayerController : MonoBehaviour {
 
     public void Moving()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        if (canMove == true)
+        {
 
-        Vector2 movement = new Vector2(h, v);
-        rb.velocity = (movement * speed);
+            float h = Input.GetAxisRaw("Horizontal");
+            float v = Input.GetAxisRaw("Vertical");
 
+            Vector2 movement = new Vector2(h, v);
+            rb.velocity = (movement * speed);
+        }
     }
 
     IEnumerator TransitionPause()
