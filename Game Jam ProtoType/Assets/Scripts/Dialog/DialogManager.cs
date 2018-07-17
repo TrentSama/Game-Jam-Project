@@ -7,7 +7,7 @@ public class DialogManager : MonoBehaviour {
 
 	public Text nameText;
 	public Text dialogText;
-	public Animator anim;
+	public Animator dialogBox;
 
 	public bool active;
 	private Queue<string> sentences;
@@ -16,7 +16,7 @@ public class DialogManager : MonoBehaviour {
 	void Start () {
 		sentences = new Queue<string> ();
 		active = false;
-		anim.SetBool ("Active", false);
+		dialogBox.SetBool ("Active", false);
 	}
 	
 	public void StartDialog (Dialog dialog) {
@@ -35,7 +35,7 @@ public class DialogManager : MonoBehaviour {
 			EndDialog ();
 			return;
 		}
-		anim.SetBool ("Active", true);
+		dialogBox.SetBool ("Active", true);
 		active = true;
 		string sentence = sentences.Dequeue ();
 		StopAllCoroutines ();
@@ -52,7 +52,7 @@ public class DialogManager : MonoBehaviour {
 
 	void EndDialog() {
 		Debug.Log ("End of convo");
-		anim.SetBool ("Active", false);
+		dialogBox.SetBool ("Active", false);
 		active = false;
 	}
 }
