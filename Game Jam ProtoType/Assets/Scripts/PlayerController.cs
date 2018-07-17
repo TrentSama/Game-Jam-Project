@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
             rb.AddForce(transform.up * thrust, ForceMode2D.Impulse);
         }
 
+
 	}
 
     public void Moving()
