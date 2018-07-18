@@ -7,11 +7,11 @@ public class EnemyTemplate : MonoBehaviour {
     public int enemyCurrentHealth;
     public int enemyDamage;
     public float timeBetweenAttack;
-    public Collider2D despawnRadius;
     public GameObject enemy;
     private Transform target;
     public float speed;
     public float chaseRange;
+    public float despawnRange;
 
 	// Use this for initialization
 	void Start () {
@@ -29,13 +29,17 @@ public class EnemyTemplate : MonoBehaviour {
         {           
            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);           
         }
-	}
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (distanceToTarget > despawnRange)
         {
             Object.Destroy(enemy);
         }
     }
+
+   // private void OnTriggerExit2D(Collider2D collision)
+    //{
+   //     if (collision.CompareTag("Player"))
+   //     {
+   //         Object.Destroy(enemy);
+   //     }
+  //  }
 }

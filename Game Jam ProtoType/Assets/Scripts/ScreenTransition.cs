@@ -27,7 +27,9 @@ public class ScreenTransition : MonoBehaviour {
     IEnumerator TransitionPause()
     {
         playerController.canMove = false;
+        playerController.speed = 0;
         yield return new WaitForSeconds(1);
+        playerController.speed = 6;
         playerController.canMove = true;
     }
 

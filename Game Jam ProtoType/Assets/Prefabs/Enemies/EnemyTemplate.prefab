@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 61217475437381150}
   - component: {fileID: 58060621118839862}
   - component: {fileID: 114742616685294528}
+  - component: {fileID: 114657583201099040}
   m_Layer: 0
   m_Name: EnemyTemplate
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +50,7 @@ CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1595612392898542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -67,7 +68,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -83,6 +84,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114657583201099040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1595612392898542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df873fe9c91aeec4f8382e35b6367812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114742616685294528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,10 +109,10 @@ MonoBehaviour:
   enemyCurrentHealth: 100
   enemyDamage: 10
   timeBetweenAttack: 0
-  despawnRadius: {fileID: 58060621118839862}
   enemy: {fileID: 1595612392898542}
   speed: 1
   chaseRange: 3
+  despawnRange: 20
 --- !u!212 &212982013296478592
 SpriteRenderer:
   m_ObjectHideFlags: 1
