@@ -8,10 +8,7 @@ public class DialogManager : MonoBehaviour {
 	public Text nameText;
 	public Text dialogText;
 	public Animator dialogBox;
-
-	public Image portrait;
-	public Sprite protagpic;
-	public Sprite fishboipic;
+	public Animator portrait;
 
 	public bool active;
 	private Queue<string> sentences;
@@ -25,6 +22,11 @@ public class DialogManager : MonoBehaviour {
 	
 	public void StartDialog (Dialog dialog) {
 		nameText.text = dialog.name;
+		if (dialog.name == "Protag") {
+			portrait.SetInteger ("portrait", 0);
+		} else if (dialog.name == "FishBoi") {
+			portrait.SetInteger ("portrait", 1);
+		}
 		sentences.Clear ();
 
 		foreach (string sentence in dialog.sentences) {
@@ -41,11 +43,6 @@ public class DialogManager : MonoBehaviour {
 		}
 		dialogBox.SetBool ("Active", true);
 		active = true;
-		if (nameText.name == "FishBoi") {
-			portrait.sprite = fishboipic;
-		} else if (nameText.name == "Protag") {
-			portrait.sprite = protagpic;
-		}
 
 		string sentence = sentences.Dequeue ();
 		StopAllCoroutines ();
