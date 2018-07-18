@@ -9,6 +9,10 @@ public class DialogManager : MonoBehaviour {
 	public Text dialogText;
 	public Animator dialogBox;
 
+	public Image portrait;
+	public Sprite protagpic;
+	public Sprite fishboipic;
+
 	public bool active;
 	private Queue<string> sentences;
 
@@ -37,6 +41,12 @@ public class DialogManager : MonoBehaviour {
 		}
 		dialogBox.SetBool ("Active", true);
 		active = true;
+		if (nameText.name == "FishBoi") {
+			portrait.sprite = fishboipic;
+		} else if (nameText.name == "Protag") {
+			portrait.sprite = protagpic;
+		}
+
 		string sentence = sentences.Dequeue ();
 		StopAllCoroutines ();
 		StartCoroutine (TypeSentence (sentence));
