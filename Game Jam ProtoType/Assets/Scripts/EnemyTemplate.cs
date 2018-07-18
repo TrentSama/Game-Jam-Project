@@ -15,10 +15,6 @@ public class EnemyTemplate : MonoBehaviour {
     public bool invincible;
 
     public float invincibilityTime = 3f;
-    public float knockback;
-    public float knockbackLength;
-    public float knockbackCount;
-    public bool knockFromRight;
 
 
     // Use this for initialization

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public float thrust;
     public Animator animator;
+    private PlayerManager playerManager;
 
     [HideInInspector]
     public bool canMove = true;
@@ -27,7 +28,8 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-	}
+        playerManager = FindObjectOfType<PlayerManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -70,9 +72,11 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.tag == "Hazard" && invincible == false)
         {
+
             if (knockFromRight)
             {
                 invincible = true;
+                playerManager.TakeDamage(2);
                 knockbackCount = 1;
                 GetComponent<Rigidbody2D>().velocity﻿ = new Vector2(-knockback, 0f);
                 yield return new WaitForSeconds(knockbackLength);
@@ -83,6 +87,7 @@ public class PlayerController : MonoBehaviour {
             else if (!knockFromRight)
             {
                 invincible = true;
+                playerManager.TakeDamage(2);
                 knockbackCount = 1;
                 GetComponent<Rigidbody2D>().velocity﻿ = new Vector2(knockback, 0f);               
                 yield return new WaitForSeconds(knockbackLength);
@@ -91,12 +96,5 @@ public class PlayerController : MonoBehaviour {
                 invincible = false;
             }
         }
-    }
-
-    IEnumerator Cooldown()
-    {
-        invincible = true;
-        yield return new WaitForSeconds(invincibilityTime);
-        invincible = false;
     }
 }

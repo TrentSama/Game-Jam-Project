@@ -3364,7 +3364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: FishBoi
+    name: Protag
     sentences:
     - Ugh it's soooo hot out here...
     - If only someone around here had something that could...

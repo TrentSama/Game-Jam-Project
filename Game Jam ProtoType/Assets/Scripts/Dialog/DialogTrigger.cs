@@ -16,7 +16,7 @@ public class DialogTrigger : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Z) && active) {
+		if (Input.GetButtonDown("Fire1") && active) {
 			if (!dm.active) {
 				TriggerDialog ();
 			}
