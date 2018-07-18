@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4238264399438366}
   - component: {fileID: 212982013296478592}
   - component: {fileID: 61217475437381150}
-  - component: {fileID: 58060621118839862}
   - component: {fileID: 114742616685294528}
   - component: {fileID: 114657583201099040}
+  - component: {fileID: 50530126559226026}
   m_Layer: 0
   m_Name: EnemyTemplate
   m_TagString: Hazard
@@ -44,21 +44,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58060621118839862
-CircleCollider2D:
+--- !u!50 &50530126559226026
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1595612392898542}
-  m_Enabled: 0
-  m_Density: 1
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 16
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &61217475437381150
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -113,6 +118,12 @@ MonoBehaviour:
   speed: 1
   chaseRange: 3
   despawnRange: 20
+  invincible: 0
+  invincibilityTime: 1
+  knockback: 3
+  knockbackLength: 0.6
+  knockbackCount: 0
+  knockFromRight: 0
 --- !u!212 &212982013296478592
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerHitbox
   - Hazard
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX

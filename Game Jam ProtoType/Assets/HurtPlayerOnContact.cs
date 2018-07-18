@@ -14,7 +14,7 @@ public class HurtPlayerOnContact : MonoBehaviour {
         PlayerController playerController = player.GetComponent<PlayerController>();
         if (collision.tag == "Player")
         {
-                playerController.knockbackCount = playerController.knockbackLength;
+               // playerController.knockbackCount = playerController.knockbackLength;
 
                 if (collision.transform.position.x < transform.position.x)
                 {

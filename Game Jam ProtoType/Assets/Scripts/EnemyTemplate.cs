@@ -12,9 +12,17 @@ public class EnemyTemplate : MonoBehaviour {
     public float speed;
     public float chaseRange;
     public float despawnRange;
+    public bool invincible;
 
-	// Use this for initialization
-	void Start () {
+    public float invincibilityTime = 3f;
+    public float knockback;
+    public float knockbackLength;
+    public float knockbackCount;
+    public bool knockFromRight;
+
+
+    // Use this for initialization
+    void Start () {
         // Initializing the health of the enemy
         enemyCurrentHealth = enemyStartingHealth;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -33,13 +41,71 @@ public class EnemyTemplate : MonoBehaviour {
         {
             Object.Destroy(enemy);
         }
+        Death();
     }
 
-   // private void OnTriggerExit2D(Collider2D collision)
-    //{
-   //     if (collision.CompareTag("Player"))
-   //     {
-   //         Object.Destroy(enemy);
-   //     }
-  //  }
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
+    {
+        {
+            if (collision.tag == "PlayerAttack")
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                PlayerController playerController = player.GetComponent<PlayerController>();
+                enemyCurrentHealth -= 101;
+                yield return null;
+            }
+        }
+    }
+
+    void TakeDamage()
+    {
+        if (invincible == false)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            enemyCurrentHealth -= playerController.damage;
+        }
+    }
+
+    void Death()
+    {
+        if (enemyCurrentHealth < 0)
+        {
+            Object.Destroy(enemy);
+        }
+    }
+
 }
+
+
+
+//}
+//        if (collision.tag == "PlayerAttack" && invincible == false && knockbackCount <= 0)
+//        {
+//            GameObject player = GameObject.FindGameObjectWithTag("Player");
+//PlayerController playerController = player.GetComponent<PlayerController>();
+//            if (knockFromRight && knockbackCount <= 0)
+//            {
+//                enemyCurrentHealth -= playerController.damage;
+//                Death();
+//invincible = true;
+//                knockbackCount = 1;
+//                GetComponent<Rigidbody2D>().velocity﻿ = new Vector2(-knockback, 0f);
+//yield return new WaitForSeconds(knockbackLength);
+//knockbackCount = 0;
+//                yield return new WaitForSeconds(invincibilityTime);
+//invincible = false;
+//            }
+//            else if (!knockFromRight && knockbackCount <= 0)
+//            {
+//                enemyCurrentHealth -= playerController.damage;
+//                Death();
+//invincible = true;
+//                knockbackCount = 1;
+//                GetComponent<Rigidbody2D>().velocity﻿ = new Vector2(knockback, 0f);
+//yield return new WaitForSeconds(knockbackLength);
+//knockbackCount = 0;
+//                yield return new WaitForSeconds(invincibilityTime);
+//invincible = false;
+//            }
+//        }
