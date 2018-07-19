@@ -11,7 +11,7 @@ public class HurtPlayerOnContact : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        PlayerController playerController = player.GetComponent<PlayerController>();
+        Collision_Player collision_Player = player.GetComponent<Collision_Player>();
         if (collision.tag != "Player")
         {
             return;
@@ -22,11 +22,11 @@ public class HurtPlayerOnContact : MonoBehaviour {
 
             if (collision.transform.position.x < transform.position.x)
             {
-                playerController.knockFromRight = true;
+                collision_Player.knockFromRight = true;
             }
             else
             {
-                playerController.knockFromRight = false;
+                collision_Player.knockFromRight = false;
             }
         }       
     }
