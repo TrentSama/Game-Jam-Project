@@ -50,6 +50,15 @@ public class EnemyTemplate : MonoBehaviour {
                 enemyCurrentHealth -= 101;
                 yield return null;
             }
+
+            if (collision.tag == "PlayerAbsorb")
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                PlayerController playerController = player.GetComponent<PlayerController>();
+                enemyCurrentHealth -= 51;
+                yield return null;
+            }
+
         }
     }
 

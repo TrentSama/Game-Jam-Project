@@ -7,6 +7,8 @@ TagManager:
   - PlayerHitbox
   - Hazard
   - PlayerAttack
+  - PlayerAbsorb
+  - HasWater
   layers:
   - Default
   - TransparentFX

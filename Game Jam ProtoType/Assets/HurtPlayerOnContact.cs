@@ -12,21 +12,22 @@ public class HurtPlayerOnContact : MonoBehaviour {
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerController playerController = player.GetComponent<PlayerController>();
-        if (collision.tag == "Player")
+        if (collision.tag != "Player")
         {
-               // playerController.knockbackCount = playerController.knockbackLength;
-
-                if (collision.transform.position.x < transform.position.x)
-                {
-                    playerController.knockFromRight = true;
-                }
-                else
-                {
-                    playerController.knockFromRight = false;
-                }           
+            return;
         }
+        else
+        {
+            // playerController.knockbackCount = playerController.knockbackLength;
+
+            if (collision.transform.position.x < transform.position.x)
+            {
+                playerController.knockFromRight = true;
+            }
+            else
+            {
+                playerController.knockFromRight = false;
+            }
+        }       
     }
-
-
-
 }
