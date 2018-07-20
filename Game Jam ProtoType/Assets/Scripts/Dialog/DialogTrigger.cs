@@ -6,13 +6,11 @@ public class DialogTrigger : MonoBehaviour {
 
 	public Dialog dialog;
 	private DialogManager dm;
-	private int testint;
 	private bool active;
 
 	void Start () {
 		dm = FindObjectOfType<DialogManager> ();
 		active = false;
-		testint = 0;
 	}
 
 	void Update () {

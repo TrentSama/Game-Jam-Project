@@ -8,6 +8,9 @@ public class PlayerManager : MonoBehaviour {
 	public int PlayerHealth;
 	public Text PlayerHealthText;
 
+	[HideInInspector]
+	public bool hasWater;
+
     // Update is called once per frame
 
 

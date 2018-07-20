@@ -12,21 +12,17 @@ public class DialogManager : MonoBehaviour {
 
 	public bool active;
 	private Queue<string> sentences;
+	private AudioSource src;
 
 	// Use this for initialization
 	void Start () {
 		sentences = new Queue<string> ();
 		active = false;
 		dialogBox.SetBool ("Active", false);
+		src = GetComponent<AudioSource> ();
 	}
 	
 	public void StartDialog (Dialog dialog) {
-		nameText.text = dialog.name;
-		if (dialog.name == "Protag") {
-			portrait.SetInteger ("portrait", 0);
-		} else if (dialog.name == "FishBoi") {
-			portrait.SetInteger ("portrait", 1);
-		}
 		sentences.Clear ();
 
 		foreach (string sentence in dialog.sentences) {
@@ -43,14 +39,29 @@ public class DialogManager : MonoBehaviour {
 		}
 		dialogBox.SetBool ("Active", true);
 		active = true;
+		src.Play ();
 
 		string sentence = sentences.Dequeue ();
+		string[] line = sentence.Split (':');
+		dialogText.text = "";
+		nameText.text = "";
+
+		// change portrait
+		if (line [0] == "Protag") {
+			portrait.SetInteger ("portrait", 0);
+		} else if (line [0] == "FishBoi") {
+			portrait.SetInteger ("portrait", 1);
+		}
+		nameText.text = line [0];
+
 		StopAllCoroutines ();
-		StartCoroutine (TypeSentence (sentence));
+		StartCoroutine (TypeSentence (line[1]));
 	}
 
 	IEnumerator TypeSentence (string sentence) {
+		yield return null;
 		dialogText.text = "";
+
 		foreach (char letter in sentence.ToCharArray()) {
 			dialogText.text += letter;
 			yield return null;
