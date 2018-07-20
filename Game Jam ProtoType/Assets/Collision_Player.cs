@@ -42,7 +42,7 @@ public class Collision_Player : MonoBehaviour
         {
             yield return null;
         }
-        if (collision.tag == "Hazard" && collision.tag != "PlayerAbsorb" && invincible == false)
+        if (collision.tag == "Hazard" && invincible == false)
         {
 
             if (knockFromRight)
@@ -50,7 +50,7 @@ public class Collision_Player : MonoBehaviour
                 invincible = true;
                 playerManager.TakeDamage(2);
                 knockbackCount = 1;
-                GetComponent<Rigidbody2D>().velocity﻿ = new Vector2(-knockback, 0f);
+                rb.velocity﻿ = new Vector2(-knockback, 0f);
                 yield return new WaitForSeconds(knockbackLength);
                 knockbackCount = 0;
                 yield return new WaitForSeconds(invincibilityTime);
@@ -61,7 +61,7 @@ public class Collision_Player : MonoBehaviour
                 invincible = true;
                 playerManager.TakeDamage(2);
                 knockbackCount = 1;
-                GetComponent<Rigidbody2D>().velocity﻿ = new Vector2(knockback, 0f);
+                rb.velocity﻿ = new Vector2(knockback, 0f);
                 yield return new WaitForSeconds(knockbackLength);
                 knockbackCount = 0;
                 yield return new WaitForSeconds(invincibilityTime);

@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class HurtPlayerOnContact : MonoBehaviour {
 
+    private Collision_Player collision_Player;
+
 	// Use this for initialization
 	void Awake () {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Collision_Player collision_Player = player.GetComponentInChildren<Collision_Player>();
     }
 	
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        Collision_Player collision_Player = player.GetComponent<Collision_Player>();
         if (collision.tag != "Player")
         {
             return;
         }
-        else
+        else if (collision.tag == "Player")
         {
             // playerController.knockbackCount = playerController.knockbackLength;
 
