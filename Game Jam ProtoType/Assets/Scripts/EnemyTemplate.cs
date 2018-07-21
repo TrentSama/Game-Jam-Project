@@ -11,10 +11,18 @@ public class EnemyTemplate : MonoBehaviour {
     private Transform target;
     public float speed;
     public float chaseRange;
-    public float despawnRange;
+    public float despawnRange;   
     public bool invincible;
 
+    // Variables for if an enemy can shoot at the player 
+    public float delayBetweenShots;
+    public float shootRange;
+    public Transform shootTransform;
+    public GameObject projectile;
+
     public float invincibilityTime = 3f;
+
+    private int timer;
 
 
     // Use this for initialization
@@ -36,6 +44,15 @@ public class EnemyTemplate : MonoBehaviour {
         if (distanceToTarget > despawnRange)
         {
             Object.Destroy(enemy);
+        }
+        if (distanceToTarget < shootRange)
+        {
+            timer++;
+            if (timer > 300)
+        { 
+            StartCoroutine(Shooting());
+                timer = 0;
+        }
         }
         Death();
     }
@@ -74,10 +91,17 @@ public class EnemyTemplate : MonoBehaviour {
 
     void Death()
     {
-        if (enemyCurrentHealth < 0)
+        if (enemyCurrentHealth <= 0)
         {
             Object.Destroy(enemy);
         }
+    }
+
+    IEnumerator Shooting()
+    {       
+        yield return new WaitForSeconds(delayBetweenShots);
+        Instantiate(projectile, shootTransform);   
+    
     }
 
 }

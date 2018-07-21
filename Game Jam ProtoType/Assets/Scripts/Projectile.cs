@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 			
-		Vector3 move = new Vector3 (0.0f, 0.15f);
+		Vector2 move = new Vector2 (0.0f, 0.15f);
 		transform.Translate (move);
 	}
 
