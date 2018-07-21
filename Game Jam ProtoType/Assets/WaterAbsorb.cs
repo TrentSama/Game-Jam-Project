@@ -5,26 +5,37 @@ using UnityEngine;
 public class WaterAbsorb : MonoBehaviour {
     public Animator animator;
     private PlayerController playerController;
-
+    private PlayerManager playerManager;
+    private Hydration hydration;
     public float water = 0;
 
 	// Use this for initialization
 	void Start () {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
+        playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>() ;
     }
 
     private void Update()
     {
         StartCoroutine(Absorb());
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            animator.SetTrigger("Absorb");
+        }
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "HasWater")
+        if (collision.tag == "HasWater" && playerManager.waterAmount <= 100)
         {
-            water += 20;
+            Debug.Log ("has water");
+            hydration = collision.GetComponentInChildren<Hydration>();
+            playerManager.waterAmount += hydration.wetnessAmount;
         }
+        
     }
 
     public IEnumerator Absorb()
@@ -40,12 +51,11 @@ public class WaterAbsorb : MonoBehaviour {
 
             else if (playerController.busy == false)
             {
-
-                animator.SetTrigger("Absorb");
                 playerController.busy = true;
-                yield return new WaitForSeconds(1f);
-                playerController.busy = false;
                 animator.SetTrigger("Absorb");
+                yield return new WaitForSeconds(0.6f);
+                animator.SetTrigger("Absorb");
+                playerController.busy = false;
             }
     }
 }

@@ -8,26 +8,26 @@ public class HurtPlayerOnContact : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        Collision_Player collision_Player = player.GetComponentInChildren<Collision_Player>();
     }
 	
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != "Player")
+        if (collision.tag != "PlayerHitbox")
         {
             return;
         }
-        else if (collision.tag == "Player")
+        else if (collision.tag == "PlayerHitbox")
         {
             // playerController.knockbackCount = playerController.knockbackLength;
 
             if (collision.transform.position.x < transform.position.x)
             {
+                collision_Player = collision.GetComponentInChildren<Collision_Player>();
                 collision_Player.knockFromRight = true;
             }
             else
             {
+                collision_Player = collision.GetComponentInChildren<Collision_Player>();
                 collision_Player.knockFromRight = false;
             }
         }       

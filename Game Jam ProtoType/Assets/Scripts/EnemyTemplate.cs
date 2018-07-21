@@ -47,7 +47,7 @@ public class EnemyTemplate : MonoBehaviour {
             {
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
                 PlayerController playerController = player.GetComponent<PlayerController>();
-                enemyCurrentHealth -= 101;
+                TakeDamage();
                 yield return null;
             }
 
@@ -55,7 +55,7 @@ public class EnemyTemplate : MonoBehaviour {
             {
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
                 PlayerController playerController = player.GetComponent<PlayerController>();
-                enemyCurrentHealth -= 51;
+                
                 yield return null;
             }
 

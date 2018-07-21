@@ -24,9 +24,6 @@ public class PlayerController : MonoBehaviour {
 
     public int damage = 1000;
 
-    public Collider2D collider1;
-    public Collider2D collider2;
-    public Collider2D collider3;
 
 
     // Use this for initialization
@@ -39,7 +36,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
         Moving();
-        StartCoroutine(MeleeAttack());       
+        StartCoroutine(MeleeAttack());  
+        
     }
 
     public IEnumerator MeleeAttack()
@@ -51,15 +49,18 @@ public class PlayerController : MonoBehaviour {
             }
         else if (busy == false)
         {
-            animator.SetTrigger("Attack");
             busy = true;
-            yield return new WaitForSeconds(0.1f);
-            busy = false;
             animator.SetTrigger("Attack");
+            yield return new WaitForSeconds(0.1f);           
+            animator.SetTrigger("Attack");
+            busy = false;
         }
     }
 
-
+    public IEnumerator WaterGun()
+    {
+        yield return null;
+    }
 
     public void Moving()
     {
