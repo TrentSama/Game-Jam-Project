@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour {
 	public int PlayerHealth;
     public int PlayerHealthMax;
 	public Text PlayerHealthText;
+    public int money = 0;
+    public int keys = 0;
 
 	[HideInInspector]
 	public bool hasWater;

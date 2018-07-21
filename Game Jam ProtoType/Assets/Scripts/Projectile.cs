@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
-	public int direction;
 	private int timer;
 
 	// Update is called once per frame
@@ -14,11 +13,14 @@ public class Projectile : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 			
-		Vector3 move = new Vector3 (0.25f * direction, 0.0f);
+		Vector3 move = new Vector3 (0.0f, 0.15f);
 		transform.Translate (move);
 	}
 
-	void OnTriggerEnter2D (Collider2D collision) {
-		Destroy (this.gameObject);
+    void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Enemy")
+          { 
+           Destroy(this.gameObject);
+          }
 	}
 }

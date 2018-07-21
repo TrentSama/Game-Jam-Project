@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public Animator animator;
     private PlayerManager playerManager;
+    private WaterAbsorb waterAbsorb;
 
     [HideInInspector]
     public bool canMove = true;
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour {
     public bool knockFromRight;
 
     public int damage = 1000;
+    public GameObject projectile;
+    public Transform projectileTransform;
 
 
 
@@ -36,8 +39,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
         Moving();
-        StartCoroutine(MeleeAttack());  
-        
+        StartCoroutine(MeleeAttack());
+        StartCoroutine(WaterGun());
     }
 
     public IEnumerator MeleeAttack()
@@ -59,7 +62,22 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator WaterGun()
     {
-        yield return null;
+        if (Input.GetButtonDown("Fire4"))
+        {
+            if (busy == true)
+            {
+                yield return null;
+            }
+            else if (busy == false && playerManager.waterAmount == 100)
+            {
+                busy = true;
+                playerManager.waterAmount -= 100;
+                animator.SetTrigger("Shoot");
+                yield return new WaitForSeconds(0.2f);
+                animator.SetTrigger("Shoot");
+                busy = false;
+            }
+        }
     }
 
     public void Moving()
@@ -82,7 +100,11 @@ public class PlayerController : MonoBehaviour {
         canMove = true;
     }
 
- 
+
+    void Projectile()
+    {
+        Instantiate(projectile, projectileTransform);
+    }
  }
     
 

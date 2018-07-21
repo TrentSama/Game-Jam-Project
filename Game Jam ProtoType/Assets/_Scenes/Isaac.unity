@@ -2353,6 +2353,31 @@ Prefab:
       propertyPath: PlayerHealthText
       value: 
       objectReference: {fileID: 1370322806}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: waterText
+      value: 
+      objectReference: {fileID: 1564260782}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: waterAmount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: waterAmountMax
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: PlayerHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: PlayerHealthMax
+      value: 123
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a09178a837cb1f428b02dfd97aa64f2, type: 2}
   m_IsPrefabAsset: 0
@@ -2453,6 +2478,11 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 5.6269445
+      objectReference: {fileID: 0}
+    - target: {fileID: 61580125689459164, guid: e19d41104cb99f0459c71f6402b131fd,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58775676654499268, guid: e19d41104cb99f0459c71f6402b131fd, type: 2}
@@ -5178,6 +5208,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1564260782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114517251633743242, guid: ccb02464939d0894ba7973eeab017910,
+    type: 2}
+  m_PrefabInternal: {fileID: 57751535}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1769715235
 GameObject:
   m_ObjectHideFlags: 0
