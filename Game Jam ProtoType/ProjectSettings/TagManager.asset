@@ -9,6 +9,7 @@ TagManager:
   - PlayerAttack
   - PlayerAbsorb
   - HasWater
+  - Projectile
   layers:
   - Default
   - TransparentFX
