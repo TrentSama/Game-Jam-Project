@@ -18,9 +18,13 @@ public class Projectile : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D collision) {
+		Debug.Log ("entered");
         if (collision.tag == "Enemy")
           { 
            Destroy(this.gameObject);
           }
+		if (collision.tag == "Dry") {
+			collision.gameObject.GetComponent<WetObject> ().wet = true;
+		}
 	}
 }

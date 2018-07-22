@@ -11,6 +11,7 @@ TagManager:
   - HasWater
   - Projectile
   - Enemy
+  - Dry
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Background
   - Foreground
   - MainLayer
-  - 
+  - Pushable
   - 
   - 
   - 
