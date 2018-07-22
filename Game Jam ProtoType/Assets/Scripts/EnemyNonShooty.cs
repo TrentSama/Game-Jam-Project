@@ -2,57 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTemplate : MonoBehaviour {
+public class EnemyNonShooty : MonoBehaviour
+{
     private int enemyStartingHealth = 100;
     public int enemyCurrentHealth;
     public int enemyDamage;
     public float timeBetweenAttack;
+
     public GameObject enemy;
     private Transform target;
+
     public float speed;
     public float chaseRange;
-    public float despawnRange;   
+    public float despawnRange;
     public bool invincible;
-
-    // Variables for if an enemy can shoot at the player 
-    public float delayBetweenShots;
-    public float shootRange;    
-    public Transform shootTransform;
-    public GameObject projectile;
-
     public float invincibilityTime = 3f;
-
-    private int timer;
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         // Initializing the health of the enemy
         enemyCurrentHealth = enemyStartingHealth;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerController playerController = player.GetComponent<PlayerController>();
         target = GameObject.Find("Player").transform;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         float distanceToTarget = Vector2.Distance(transform.position, target.position);
         if (distanceToTarget < chaseRange)
-        {           
-           transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);           
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
         if (distanceToTarget > despawnRange)
         {
             Object.Destroy(enemy);
-        }
-        if (distanceToTarget < shootRange)
-        {
-            timer++;
-            if (timer > 500)
-        { 
-            StartCoroutine(Shooting());
-                timer = 0;
-             }
         }
         Death();
     }
@@ -72,7 +59,7 @@ public class EnemyTemplate : MonoBehaviour {
             {
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
                 PlayerController playerController = player.GetComponent<PlayerController>();
-                
+
                 yield return null;
             }
 
@@ -96,11 +83,4 @@ public class EnemyTemplate : MonoBehaviour {
             Object.Destroy(enemy);
         }
     }
-
-    IEnumerator Shooting()
-    {       
-        yield return new WaitForSeconds(delayBetweenShots);
-        Instantiate(projectile, shootTransform.position, shootTransform.rotation);       
-    }
 }
-
