@@ -14,7 +14,7 @@ public class DialogTrigger : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetButtonDown("Fire4") && active) {
+		if (Input.GetButtonDown("Fire1") && active) {
 			if (!dm.active) {
 				TriggerDialog ();
 			}
