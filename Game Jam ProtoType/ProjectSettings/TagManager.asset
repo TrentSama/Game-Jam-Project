@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Dry
   - Pushable
+  - Patroller
   layers:
   - Default
   - TransparentFX
