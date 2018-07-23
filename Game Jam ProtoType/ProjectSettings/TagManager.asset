@@ -12,6 +12,7 @@ TagManager:
   - Projectile
   - Enemy
   - Dry
+  - Pushable
   layers:
   - Default
   - TransparentFX
