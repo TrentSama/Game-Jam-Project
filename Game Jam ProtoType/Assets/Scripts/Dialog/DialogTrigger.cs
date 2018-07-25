@@ -7,9 +7,11 @@ public class DialogTrigger : MonoBehaviour {
 	public Dialog dialog;
 	private DialogManager dm;
 	private bool active;
+	private Animator anim;
 
 	void Start () {
 		dm = FindObjectOfType<DialogManager> ();
+		anim = GetComponent<Animator> ();
 		active = false;
 	}
 
@@ -25,6 +27,7 @@ public class DialogTrigger : MonoBehaviour {
 	}
 
 	public void TriggerDialog () {
+		dm.NPC = anim;
 		dm.StartDialog (dialog);
 	}
 

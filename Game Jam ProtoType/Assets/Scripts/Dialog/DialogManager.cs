@@ -9,6 +9,7 @@ public class DialogManager : MonoBehaviour {
 	public Text dialogText;
 	public Animator dialogBox;
 	public Animator portrait;
+	public Animator NPC;
 
 	public bool active;
 	private Queue<string> sentences;
@@ -28,6 +29,8 @@ public class DialogManager : MonoBehaviour {
 		foreach (string sentence in dialog.sentences) {
 			sentences.Enqueue (sentence);
 		}
+
+		NPC.SetBool ("Talking", true);
 		DisplayNextSentence ();
 
 	}
@@ -71,6 +74,7 @@ public class DialogManager : MonoBehaviour {
 	void EndDialog() {
 		Debug.Log ("End of convo");
 		dialogBox.SetBool ("Active", false);
+		NPC.SetBool ("Talking", false);
 		active = false;
 	}
 }
