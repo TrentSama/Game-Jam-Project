@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: FishBoi
     sentences:
     - Howdy
     - it's so hot my dude
@@ -763,6 +762,21 @@ Prefab:
       propertyPath: PlayerHealthText
       value: 
       objectReference: {fileID: 1131528781}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: waterText
+      value: 
+      objectReference: {fileID: 1984628939}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: waterAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: waterAmountMax
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a09178a837cb1f428b02dfd97aa64f2, type: 2}
   m_IsPrefabAsset: 0
@@ -1122,11 +1136,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4873510028503240, guid: 2799210cef0ee8548bcebe46d8cb8c9f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.851608
+      value: 12.846096
       objectReference: {fileID: 0}
     - target: {fileID: 4873510028503240, guid: 2799210cef0ee8548bcebe46d8cb8c9f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.0034113
+      value: -2.003416
       objectReference: {fileID: 0}
     - target: {fileID: 4873510028503240, guid: 2799210cef0ee8548bcebe46d8cb8c9f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1367,6 +1381,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb02464939d0894ba7973eeab017910, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1984628939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114517251633743242, guid: ccb02464939d0894ba7973eeab017910,
+    type: 2}
+  m_PrefabInternal: {fileID: 1984628938}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &2001167999 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114301270573561888, guid: ccb02464939d0894ba7973eeab017910,
