@@ -18,7 +18,7 @@ public class WaterAbsorb : MonoBehaviour {
 
     private void Update()
     {
-        StartCoroutine(Absorb());
+        AbsorbAnim(); 
 
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -38,7 +38,7 @@ public class WaterAbsorb : MonoBehaviour {
         
     }
 
-    public IEnumerator Absorb()
+    public void AbsorbAnim()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
@@ -46,16 +46,21 @@ public class WaterAbsorb : MonoBehaviour {
 
             if (playerController.busy == true)
             {
-                yield return null;
+                playerController.Moving();
+                return;
             }
 
             else if (playerController.busy == false)
             {
                 playerController.busy = true;
-                animator.SetTrigger("Absorb");
-                yield return new WaitForSeconds(0.6f);
-                animator.SetTrigger("Absorb");
-                playerController.busy = false;
+                animator.SetBool("AbsorbBool", true);               
+
             }
+
+        if (Input.GetButtonUp("Fire3"))
+        {
+            animator.SetBool("AbsorbBool", false);
+            playerController.busy = false;
+        }
     }
 }

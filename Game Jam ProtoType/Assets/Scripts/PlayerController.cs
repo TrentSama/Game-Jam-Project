@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        
         Moving();
         StartCoroutine(MeleeAttack());
         StartCoroutine(WaterGun());
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
         {
             busy = true;
             animator.SetTrigger("Attack");
-            yield return new WaitForSeconds(0.1f);           
+            yield return new WaitForSeconds(1f);           
             animator.SetTrigger("Attack");
             busy = false;
         }
@@ -82,15 +82,24 @@ public class PlayerController : MonoBehaviour {
 
     public void Moving()
     {
+
         if (canMove == true && knockbackCount <= 0)
         {
 
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
-
-            Vector2 movement = new Vector2(h, v);
-            rb.velocity = (movement * speed);
+            if (busy == false)
+            {
+                Vector2 movement = new Vector2(h, v);
+                rb.velocity = (movement * speed);
+            }
+            else
+            {
+                h = 0;
+                v = 0;
+            }
         }
+
     }
 
     IEnumerator TransitionPause()
