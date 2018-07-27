@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator WaterGun()
     {
-        if (Input.GetButtonDown("Fire4"))
+		if (Input.GetButtonDown("Fire4"))
         {
             if (busy == true)
             {
@@ -98,6 +98,18 @@ public class PlayerController : MonoBehaviour {
                 h = 0;
                 v = 0;
             }
+
+			if (h == 0 && v == 0) {
+				animator.SetBool ("Moving", false);
+			} else if (h > 0) {
+				animator.SetBool ("Moving", true);
+				this.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+			} else if (h < 0) {
+				animator.SetBool ("Moving", true);
+				this.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+			} else if (v != 0) {
+				animator.SetBool ("Moving", true);
+			}
         }
 
     }

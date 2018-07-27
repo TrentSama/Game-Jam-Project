@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour {
 
     private int maxMoney = 100;
     public int money = 0;
+	public Text moneyText;
     public int keys = 0;
 
 	[HideInInspector]
@@ -30,6 +31,7 @@ public class PlayerManager : MonoBehaviour {
     void Update () {
 		PlayerHealthText.text = "Health: " + PlayerHealth;
         waterText.text = "Water: " + waterAmount;
+		moneyText.text = "Money: $" + money;
 
 		if (Input.GetKeyDown (KeyCode.X)) {
 			PlayerHealth -= 1;
