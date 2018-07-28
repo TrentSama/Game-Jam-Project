@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public Animator animator;
     private PlayerManager playerManager;
     private WaterAbsorb waterAbsorb;
+    private FootstepSounds footstepSounds;
 
     [HideInInspector]
     public bool canMove = true;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         rb = GetComponent<Rigidbody2D>();
         playerManager = FindObjectOfType<PlayerManager>();
+        footstepSounds = GetComponentInChildren<FootstepSounds>();
     }
 	
 	// Update is called once per frame
@@ -126,6 +128,12 @@ public class PlayerController : MonoBehaviour {
 
         yield return null;
 
+    }
+
+
+    public void FootStep()
+    {
+        footstepSounds.PlayFootStep();
     }
 
     void Projectile()

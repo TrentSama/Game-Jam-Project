@@ -16,7 +16,7 @@ public class Pickup_Money : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            playerManager.waterAmount += moneyAmount;
+            playerManager.money += moneyAmount;
             Object.Destroy(this.gameObject);
         }
     }

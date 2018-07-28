@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour {
     public float speed; // Experiment with this to what feels right - 3f;
     public int damage; // the damage this projectile does to the player
+    Animator anim;
+    AudioSource explosion;
 
     private Rigidbody2D rb;
     private int timeLimit; // the counter that goes every frame
@@ -19,6 +21,8 @@ public class EnemyProjectile : MonoBehaviour {
     void Start () {
         rb = GetComponent<Rigidbody2D>();
         playerManager = FindObjectOfType<PlayerManager>();
+        anim = GetComponent<Animator>();
+        explosion = GetComponent<AudioSource>();
     }
 	
 
@@ -32,10 +36,14 @@ public class EnemyProjectile : MonoBehaviour {
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            anim.SetTrigger("Hit");
+            explosion.Play();
+            Destroy(GetComponent<Collider2D>());
+            yield return new WaitForSeconds(0.30f);
             Destroy(this.gameObject);
             playerManager.PlayerHealth -= damage;
         }

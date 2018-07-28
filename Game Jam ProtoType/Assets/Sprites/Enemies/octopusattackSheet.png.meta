@@ -1,0 +1,760 @@
+fileFormatVersion: 2
+guid: cc3aa1299ef27a64fbf58c84d8fae638
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: octopusattackSheet_0
+    21300002: octopusattackSheet_1
+    21300004: octopusattackSheet_2
+    21300006: octopusattackSheet_3
+    21300008: octopusattackSheet_4
+    21300010: octopusattackSheet_5
+    21300012: octopusattackSheet_6
+    21300014: octopusattackSheet_7
+    21300016: octopusattackSheet_8
+    21300018: octopusattackSheet_9
+    21300020: octopusattackSheet_10
+    21300022: octopusattackSheet_11
+    21300024: octopusattackSheet_12
+    21300026: octopusattackSheet_13
+    21300028: octopusattackSheet_14
+    21300030: octopusattackSheet_15
+    21300032: octopusattackSheet_16
+    21300034: octopusattackSheet_17
+    21300036: octopusattackSheet_18
+    21300038: octopusattackSheet_19
+    21300040: octopusattackSheet_20
+    21300042: octopusattackSheet_21
+    21300044: octopusattackSheet_22
+    21300046: octopusattackSheet_23
+    21300048: octopusattackSheet_24
+    21300050: octopusattackSheet_25
+    21300052: octopusattackSheet_26
+    21300054: octopusattackSheet_27
+    21300056: octopusattackSheet_28
+    21300058: octopusattackSheet_29
+    21300060: octopusattackSheet_30
+    21300062: octopusattackSheet_31
+    21300064: octopusattackSheet_32
+    21300066: octopusattackSheet_33
+    21300068: octopusattackSheet_34
+    21300070: octopusattackSheet_35
+    21300072: octopusattackSheet_36
+    21300074: octopusattackSheet_37
+    21300076: octopusattackSheet_38
+    21300078: octopusattackSheet_39
+    21300080: octopusattackSheet_40
+    21300082: octopusattackSheet_41
+    21300084: octopusattackSheet_42
+    21300086: octopusattackSheet_43
+    21300088: octopusattackSheet_44
+    21300090: octopusattackSheet_45
+    21300092: octopusattackSheet_46
+    21300094: octopusattackSheet_47
+    21300096: octopusattackSheet_48
+    21300098: octopusattackSheet_49
+    21300100: octopusattackSheet_50
+    21300102: octopusattackSheet_51
+    21300104: octopusattackSheet_52
+    21300106: octopusattackSheet_53
+    21300108: octopusattackSheet_54
+    21300110: octopusattackSheet_55
+    21300112: octopusattackSheet_56
+    21300114: octopusattackSheet_57
+    21300116: octopusattackSheet_58
+    21300118: octopusattackSheet_59
+    21300120: octopusattackSheet_60
+    21300122: octopusattackSheet_61
+    21300124: octopusattackSheet_62
+    21300126: octopusattackSheet_63
+    21300128: octopusattackSheet_64
+    21300130: octopusattackSheet_65
+    21300132: octopusattackSheet_66
+    21300134: octopusattackSheet_67
+    21300136: octopusattackSheet_68
+    21300138: octopusattackSheet_69
+    21300140: octopusattackSheet_70
+    21300142: octopusattackSheet_71
+    21300144: octopusattackSheet_72
+    21300146: octopusattackSheet_73
+    21300148: octopusattackSheet_74
+    21300150: octopusattackSheet_75
+    21300152: octopusattackSheet_76
+    21300154: octopusattackSheet_77
+    21300156: octopusattackSheet_78
+    21300158: octopusattackSheet_79
+    21300160: octopusattackSheet_80
+    21300162: octopusattackSheet_81
+    21300164: octopusattackSheet_82
+    21300166: octopusattackSheet_83
+    21300168: octopusattackSheet_84
+    21300170: octopusattackSheet_85
+    21300172: octopusattackSheet_86
+    21300174: octopusattackSheet_87
+    21300176: octopusattackSheet_88
+    21300178: octopusattackSheet_89
+  externalObjects: {}
+  serializedVersion: 6
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: octopusattackSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76efdabc24c1ac64baa7d7d9784e05e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230f845e03d36e9428ded589dc61cbd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_2
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 6
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2a6bce6ba5daf4bab6e10d8941d2fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_3
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 6
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a997abdd261d6b84f99e79a06ba0bb7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_4
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43faf453255b034a997a4945bfcc883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_5
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9446b892511abb43a74b571311490af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_6
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 7
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ea379739278de4cbb0f037233e90fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_7
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 7
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340500e13d2168c49aa1e98c9f9c2d96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_8
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff89a9f43854ba34b905f5e870b54c55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_9
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175a8a33e49e9f742856ca55ac81042b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_10
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 7
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d059c078abb9d241b76f2289bfc208a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_11
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63150818f66ead4e8308a7b25051617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_12
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04bac59ef1af8d4186848db25e70027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_13
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c4d6f43e1456a4b80461fd022a3972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_14
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1294214ab9edc2245b5c3d9532a2007c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_15
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e8e648bc33ad847ab2684406acca2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_16
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee68bb8b4ddf3d41a5f817908acd90d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3277a7670c7a84f9005a34df27822c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5850330d415b5a64d8ff5c84e2611df9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ef937bffa32a649a942820a28e32d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c5c810d62198b4483de78e87a74f50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcdc63d5646c6334aa6aaafd9a0ac6e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d0f3dbb3a7588478766a22e92567fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bced5bbb17936a4787fbc79a80ba246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211fa9e89d5b64341889d5aaacfd5a95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5056138dea5412341aa51b73d0c7bf3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octopusattackSheet_26
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 8
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed88e1d9fc2def46ac9f530eff45770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 28ee1abba2ce855418131613b044d1ec
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

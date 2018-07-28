@@ -13,6 +13,7 @@ public class EnemyTemplate : MonoBehaviour {
     public float chaseRange;
     public float despawnRange;   
     public bool invincible;
+    Animator anim;
 
     // Variables for if an enemy can shoot at the player 
     public float delayBetweenShots;
@@ -31,12 +32,21 @@ public class EnemyTemplate : MonoBehaviour {
         enemyCurrentHealth = enemyStartingHealth;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerController playerController = player.GetComponent<PlayerController>();
+        anim = GetComponent<Animator>();
         target = GameObject.Find("Player").transform;
     }
 	
 	// Update is called once per frame
 	void Update () {
         float distanceToTarget = Vector2.Distance(transform.position, target.position);
+        if (target.position.x - transform.position.x > 0)
+        {
+            this.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        }
         if (distanceToTarget < chaseRange)
         {           
            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);           
@@ -49,8 +59,10 @@ public class EnemyTemplate : MonoBehaviour {
         {
             timer++;
             if (timer > 500)
-        { 
-            StartCoroutine(Shooting());
+        {
+                anim.SetTrigger("Attack");
+                StartCoroutine(ShootDelay());
+                anim.SetTrigger("Attack");
                 timer = 0;
              }
         }
@@ -97,9 +109,13 @@ public class EnemyTemplate : MonoBehaviour {
         }
     }
 
-    IEnumerator Shooting()
+    IEnumerator ShootDelay()
+    {
+        yield return new WaitForSeconds(2.2f);
+    }
+
+    void Shooting()
     {       
-        yield return new WaitForSeconds(delayBetweenShots);
         Instantiate(projectile, shootTransform.position, shootTransform.rotation);       
     }
 }

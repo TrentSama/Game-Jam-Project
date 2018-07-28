@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114893081070931218}
   - component: {fileID: 114143651993833128}
   - component: {fileID: 50185826463219332}
+  - component: {fileID: 95705167864472820}
   m_Layer: 10
   m_Name: EnemyTemplate ShootyGuy
   m_TagString: Untagged
@@ -70,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1936668801981734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.97, y: -4.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4625565377637872}
@@ -98,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1068463817070470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.802, y: -0.112, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559390185244084}
@@ -165,7 +166,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7, y: 1.45}
+    oldSize: {x: 1.9375, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -174,6 +175,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95705167864472820
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936668801981734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5891ab9ff8ff63d4c95296db7b2df4ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114143651993833128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,14 +230,14 @@ MonoBehaviour:
   enemyDamage: 10
   timeBetweenAttack: 0
   enemy: {fileID: 1936668801981734}
-  speed: 1
-  chaseRange: 3
-  despawnRange: 20
+  speed: 0
+  chaseRange: 0
+  despawnRange: 40
   invincible: 0
-  delayBetweenShots: 1
-  shootRange: 100
+  delayBetweenShots: 1.25
+  shootRange: 20
   shootTransform: {fileID: 4867352940394494}
-  projectile: {fileID: 1269689290334176, guid: 62f7982c1e4f2bf4981a34689d239235, type: 2}
+  projectile: {fileID: 1777264412440246, guid: f0785e4228ff12d4c87fe730cea70c33, type: 2}
   invincibilityTime: 1
 --- !u!212 &212553809304447292
 SpriteRenderer:
@@ -255,8 +274,8 @@ SpriteRenderer:
   m_SortingLayerID: 1480944025
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 67499dcd4234c5c4c8debb7234284c9a, type: 3}
-  m_Color: {r: 0, g: 0.3296814, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 22d87c17a9cead244b10a660594e8201, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
