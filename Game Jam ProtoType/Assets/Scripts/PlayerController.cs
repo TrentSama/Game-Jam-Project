@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
         Moving();
         StartCoroutine(MeleeAttack());
         StartCoroutine(WaterGun());
@@ -121,6 +120,13 @@ public class PlayerController : MonoBehaviour {
         canMove = true;
     }
 
+
+    IEnumerator ShootWater()
+    {
+
+        yield return null;
+
+    }
 
     void Projectile()
     {
