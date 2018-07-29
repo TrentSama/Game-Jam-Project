@@ -16,16 +16,14 @@ public class Hole : MonoBehaviour {
 
 	void OnTriggerStay2D (Collider2D col) {
 		if (col.CompareTag("Pushable") && SamePosition(col.transform)){
-			Destroy (col.gameObject);
-
+			col.gameObject.SetActive(false);
+			this.GetComponent<DialogTrigger> ().enabled = false;
 		}
 	}
 
 	private bool SamePosition (Transform trans) {
-		if (trans.position.y <= this.transform.position.y + 0.05f
-			&& trans.position.y >= this.transform.position.y - 0.05f
-			&& trans.position.x <= this.transform.position.x + 0.05f
-			&& trans.position.x >= this.transform.position.x - 0.05f) {
+		if (trans.position.x <= this.transform.position.x + 0.5f
+			&& trans.position.x >= this.transform.position.x - 0.5f) {
 			return true;
 		}
 		return false;
