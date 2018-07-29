@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour {
     void Update () {
 		PlayerHealthText.text = "Health: " + PlayerHealth;
         waterText.text = "Water: " + waterAmount;
-		moneyText.text = "Money: $" + money;
+		moneyText.text = "" + money;
 
 		if (Input.GetKeyDown (KeyCode.X)) {
 			PlayerHealth -= 1;
