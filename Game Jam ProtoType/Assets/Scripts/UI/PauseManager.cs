@@ -20,7 +20,7 @@ public class PauseManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Submit"))
         {
             canvas.enabled = !canvas.enabled;
             Pause();
@@ -49,6 +49,7 @@ public class PauseManager : MonoBehaviour {
 
     public void Quit()
     {
+        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         SceneManager.LoadScene("TitleScreen");
     }
 }

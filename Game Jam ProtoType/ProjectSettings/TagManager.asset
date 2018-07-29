@@ -17,6 +17,9 @@ TagManager:
   - beach
   - waterpuddle
   - cave
+  - MusicTown
+  - MusicBeach
+  - HellaCreepy
   layers:
   - Default
   - TransparentFX
