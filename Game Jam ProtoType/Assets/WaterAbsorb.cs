@@ -57,7 +57,7 @@ public class WaterAbsorb : MonoBehaviour {
 
             }
 
-        if (Input.GetButtonUp("Fire3"))
+        if (Input.GetButtonUp("Fire3") || Input.GetKeyUp(KeyCode.X))
         {
             animator.SetBool("AbsorbBool", false);
             playerController.busy = false;
