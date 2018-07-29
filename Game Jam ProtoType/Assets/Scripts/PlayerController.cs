@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator MeleeAttack()
     {
-        if (Input.GetButtonDown("Fire2") && knockbackCount <= 0)
+        if (Input.GetButtonDown("Fire2") && knockbackCount <= 0 || Input.GetKeyDown(KeyCode.Z) && knockbackCount <= 0)
             if (busy == true)
             {
                 yield return null;
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator WaterGun()
     {
-		if (Input.GetButtonDown("Fire4"))
+		if (Input.GetButtonDown("Fire4") || Input.GetKeyDown(KeyCode.X))
         {
             if (busy == true)
             {

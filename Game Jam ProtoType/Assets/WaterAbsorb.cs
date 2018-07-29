@@ -20,10 +20,10 @@ public class WaterAbsorb : MonoBehaviour {
     {
         AbsorbAnim(); 
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            animator.SetTrigger("Absorb");
-        }
+        //if (Input.GetKeyDown(KeyCode.F))
+       // {
+        //    animator.SetTrigger("Absorb");
+        //}
 
     }
 
@@ -42,7 +42,7 @@ public class WaterAbsorb : MonoBehaviour {
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButtonDown("Fire3") || Input.GetKeyDown(KeyCode.X))
 
             if (playerController.busy == true)
             {
@@ -63,4 +63,10 @@ public class WaterAbsorb : MonoBehaviour {
             playerController.busy = false;
         }
     }
+    
+    void AbsorbConstant()
+    {
+
+    }
+
 }

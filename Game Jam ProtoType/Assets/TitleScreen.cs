@@ -18,7 +18,7 @@ public class TitleScreen : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Overworld");
+        SceneManager.LoadScene("Opening Cutscene");
     }
 
     public void Quit()
