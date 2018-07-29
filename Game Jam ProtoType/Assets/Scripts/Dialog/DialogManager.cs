@@ -50,7 +50,7 @@ public class DialogManager : MonoBehaviour {
 		nameText.text = "";
 
 		// change portrait
-		if (line [0] == "Protag") {
+		if (line [0] == "Marina") {
 			portrait.SetInteger ("portrait", 0);
 		} else if (line [0] == "FishBoi") {
 			portrait.SetInteger ("portrait", 1);
