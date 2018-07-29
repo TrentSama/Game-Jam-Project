@@ -37,13 +37,14 @@ public class PlayerManager : MonoBehaviour {
 		WaterIcon.SetInteger ("Water", waterAmount);
 		moneyText.text = "" + money;
 
-		if (Input.GetKeyDown (KeyCode.X)) {
-			PlayerHealth -= 1;
-		}
-
         if (waterAmount >= waterAmountMax)
         {
             waterAmount = waterAmountMax;
+        }
+
+        if (PlayerHealth >= PlayerHealthMax)
+        {
+            PlayerHealth = PlayerHealthMax;
         }
 
         Death();

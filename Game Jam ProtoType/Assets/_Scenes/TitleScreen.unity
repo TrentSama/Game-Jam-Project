@@ -319,7 +319,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 711002058}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -527,7 +527,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: ef13b2ea2a7494c47ab0bbda5ae535fc, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -545,8 +545,12 @@ PlayableDirector:
     value: {fileID: 1223313984}
   - key: {fileID: 114068812338992128, guid: ef13b2ea2a7494c47ab0bbda5ae535fc, type: 2}
     value: {fileID: 1402500376}
-  - key: {fileID: 114936947199190180, guid: ef13b2ea2a7494c47ab0bbda5ae535fc, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 2115002063}
+  - key: {fileID: 114184507233738714, guid: ef13b2ea2a7494c47ab0bbda5ae535fc, type: 2}
+    value: {fileID: 1339358534}
+  - key: {fileID: 114563738589054124, guid: ef13b2ea2a7494c47ab0bbda5ae535fc, type: 2}
+    value: {fileID: 991455210}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &916546593
@@ -1449,7 +1453,8 @@ AudioSource:
   m_GameObject: {fileID: 2115002062}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243997087714524956, guid: 82b989fad46206741af57e2965634253,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: b214ce6364be95842ab17d20719e8319, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

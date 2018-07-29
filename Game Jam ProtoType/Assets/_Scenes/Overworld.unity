@@ -8110,6 +8110,11 @@ Prefab:
       propertyPath: HealthIcon
       value: 
       objectReference: {fileID: 1984628941}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: PlayerHealthMax
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a09178a837cb1f428b02dfd97aa64f2, type: 2}
   m_IsPrefabAsset: 0
@@ -9062,11 +9067,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4873510028503240, guid: 2799210cef0ee8548bcebe46d8cb8c9f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -14.475857
+      value: -14.470497
       objectReference: {fileID: 0}
     - target: {fileID: 4873510028503240, guid: 2799210cef0ee8548bcebe46d8cb8c9f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.9011574
+      value: -6.901161
       objectReference: {fileID: 0}
     - target: {fileID: 4873510028503240, guid: 2799210cef0ee8548bcebe46d8cb8c9f, type: 2}
       propertyPath: m_LocalPosition.z

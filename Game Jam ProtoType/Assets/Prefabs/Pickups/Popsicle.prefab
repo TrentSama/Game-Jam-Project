@@ -78,7 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638e1611073b1bf42825ef621114c5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healingAmount: 4
+  healingAmount: 1
+  followRange: 6
+  speed: 6
 --- !u!212 &212979294049009800
 SpriteRenderer:
   m_ObjectHideFlags: 1
