@@ -23,6 +23,7 @@ public class FishBoi : MonoBehaviour {
 			rich = true;
 			olddialog.enabled = false;
 			newdialog.enabled = true;
+			body.SetActive (false);
 		}
 	}
 		

@@ -58,6 +58,8 @@ public class DialogManager : MonoBehaviour {
 			portrait.SetInteger ("portrait", 2);
 		} else if (line [0] == "Puke") {
 			portrait.SetInteger ("portrait", 3);
+		} else {
+			portrait.SetInteger ("portrait", 11);
 		}
 		nameText.text = line [0];
 

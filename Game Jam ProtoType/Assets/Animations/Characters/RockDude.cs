@@ -17,7 +17,13 @@ public class RockDude : MonoBehaviour {
 	void Update () {
 		if (body.activeSelf) {
 			newpos = body.transform.position.x;
-			this.transform.position = new Vector3 (newpos, this.transform.position.y);
+			if (this.transform.position.x >= -22f) {
+				this.transform.position = new Vector3 (newpos, this.transform.position.y);
+			} else {
+				this.transform.position = new Vector3 (-22f, this.transform.position.y);
+				body.transform.position = new Vector3 (this.transform.position.x,
+						this.transform.position.y);
+			}
 		}
 		if (body.activeSelf == false && used) {
 			oldtext.enabled = false;

@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   olddialog: {fileID: 234062370}
-  newdialog: {fileID: 0}
+  newdialog: {fileID: 234062373}
   body: {fileID: 2123925059}
   toll: 100
 --- !u!114 &234062373
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 234062366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1631f8934f69c634592b1ae1c2490338, type: 3}
   m_Name: 
@@ -8519,6 +8519,7 @@ GameObject:
   - component: {fileID: 916429380}
   - component: {fileID: 916429382}
   - component: {fileID: 916429383}
+  - component: {fileID: 916429384}
   m_Layer: 0
   m_Name: sandcastle4
   m_TagString: Untagged
@@ -8625,6 +8626,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!95 &916429384
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 916429379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &944605257
 GameObject:
   m_ObjectHideFlags: 0
@@ -9239,6 +9258,7 @@ GameObject:
   - component: {fileID: 1108228920}
   - component: {fileID: 1108228922}
   - component: {fileID: 1108228923}
+  - component: {fileID: 1108228924}
   m_Layer: 0
   m_Name: sandcastle5
   m_TagString: Untagged
@@ -9344,6 +9364,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!95 &1108228924
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108228919}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1113911834
 GameObject:
   m_ObjectHideFlags: 0
@@ -11665,6 +11703,7 @@ GameObject:
   - component: {fileID: 1864121316}
   - component: {fileID: 1864121318}
   - component: {fileID: 1864121319}
+  - component: {fileID: 1864121320}
   m_Layer: 0
   m_Name: sandcastle3
   m_TagString: Untagged
@@ -11771,6 +11810,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!95 &1864121320
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864121315}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1867886351 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114590220298547502, guid: ccb02464939d0894ba7973eeab017910,
