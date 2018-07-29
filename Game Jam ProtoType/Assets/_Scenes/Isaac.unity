@@ -214,12 +214,12 @@ Prefab:
     - target: {fileID: 224487501832496222, guid: ccb02464939d0894ba7973eeab017910,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 114590220298547502, guid: ccb02464939d0894ba7973eeab017910,
         type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 26
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 224487501832496222, guid: ccb02464939d0894ba7973eeab017910,
         type: 2}
@@ -300,6 +300,41 @@ Prefab:
         type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224472423064183448, guid: ccb02464939d0894ba7973eeab017910,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 245
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024422733357410, guid: ccb02464939d0894ba7973eeab017910,
+        type: 2}
+      propertyPath: m_Text
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224472423064183448, guid: ccb02464939d0894ba7973eeab017910,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024422733357410, guid: ccb02464939d0894ba7973eeab017910,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024422733357410, guid: ccb02464939d0894ba7973eeab017910,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024422733357410, guid: ccb02464939d0894ba7973eeab017910,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024422733357410, guid: ccb02464939d0894ba7973eeab017910,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb02464939d0894ba7973eeab017910, type: 2}
@@ -426,6 +461,7 @@ GameObject:
   - component: {fileID: 291832869}
   - component: {fileID: 291832871}
   - component: {fileID: 291832870}
+  - component: {fileID: 291832872}
   m_Layer: 5
   m_Name: WaterIcon
   m_TagString: Untagged
@@ -485,6 +521,24 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 291832868}
   m_CullTransparentMesh: 0
+--- !u!95 &291832872
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 291832868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1924253ccf35b024bb5fb574373436ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &300258939
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +925,21 @@ Prefab:
       propertyPath: PlayerHealthMax
       value: 123
       objectReference: {fileID: 0}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: HealthIcon
+      value: 
+      objectReference: {fileID: 1565177775}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: moneyText
+      value: 
+      objectReference: {fileID: 2037624985}
+    - target: {fileID: 114659242529007590, guid: 4a09178a837cb1f428b02dfd97aa64f2,
+        type: 2}
+      propertyPath: WaterIcon
+      value: 
+      objectReference: {fileID: 291832872}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a09178a837cb1f428b02dfd97aa64f2, type: 2}
   m_IsPrefabAsset: 0
@@ -4125,6 +4194,7 @@ GameObject:
   - component: {fileID: 1565177772}
   - component: {fileID: 1565177774}
   - component: {fileID: 1565177773}
+  - component: {fileID: 1565177775}
   m_Layer: 5
   m_Name: HealthIcon
   m_TagString: Untagged
@@ -4147,7 +4217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 135.93, y: -16.81}
+  m_AnchoredPosition: {x: 95, y: -20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565177773
@@ -4184,6 +4254,24 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1565177771}
   m_CullTransparentMesh: 0
+--- !u!95 &1565177775
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565177771}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7aac120d92d762b438118357cfb687ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1568361268
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,6 +4453,12 @@ Rigidbody2D:
 --- !u!114 &1885057386 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114224488550329102, guid: ccb02464939d0894ba7973eeab017910,
+    type: 2}
+  m_PrefabInternal: {fileID: 57751535}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2037624985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114590220298547502, guid: ccb02464939d0894ba7973eeab017910,
     type: 2}
   m_PrefabInternal: {fileID: 57751535}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}

@@ -8,9 +8,11 @@ public class PlayerManager : MonoBehaviour {
     public int waterAmount;
     public int waterAmountMax;
     public Text waterText;
+	public Animator WaterIcon;
 	public int PlayerHealth;
     public int PlayerHealthMax;
 	public Text PlayerHealthText;
+	public Animator HealthIcon;
 
     private int maxMoney = 100;
     public int money = 0;
@@ -29,8 +31,10 @@ public class PlayerManager : MonoBehaviour {
     }
 
     void Update () {
-		PlayerHealthText.text = "Health: " + PlayerHealth;
-        waterText.text = "Water: " + waterAmount;
+		PlayerHealthText.text = "" + PlayerHealth;
+		HealthIcon.SetInteger ("Health", PlayerHealth);
+        waterText.text = "" + waterAmount;
+		WaterIcon.SetInteger ("Water", waterAmount);
 		moneyText.text = "" + money;
 
 		if (Input.GetKeyDown (KeyCode.X)) {
