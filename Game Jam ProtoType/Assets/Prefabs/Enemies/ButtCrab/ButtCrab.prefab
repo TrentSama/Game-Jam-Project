@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 50801309393165604}
   - component: {fileID: 95325745044426400}
   - component: {fileID: 114224223333192090}
+  - component: {fileID: 114156365177218164}
   m_Layer: 10
   m_Name: ButtCrab
   m_TagString: Untagged
@@ -231,6 +232,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wetnessAmount: 2
+--- !u!114 &114156365177218164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1388680483434138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988dd9e1585914f49a2d3b5257d23433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pincers: {fileID: 0}
+  snipSounds: []
 --- !u!114 &114224223333192090
 MonoBehaviour:
   m_ObjectHideFlags: 1
